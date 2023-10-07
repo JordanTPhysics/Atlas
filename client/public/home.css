@@ -19,7 +19,7 @@ html {
   position: relative;
 }
 /* SmartPhone */
-@media screen and (max-width: 419px) {
+@media screen and (max-width: 449px) {
   h2,
   .neon-text {
     font-size: 0.75rem; /* Adjust font size for smaller screens */
@@ -38,6 +38,7 @@ html {
     width: 70vw;
   }
   .list-item {
+    margin: 0.5vh;
     padding: 1vh;
     display: block;
   }
@@ -49,9 +50,12 @@ html {
     margin: 0.5vh;
     font-size: small;
   }
+  .footer{
+    margin-top: 5vh;
+  }
 }
 /* Tablets */
-@media screen and (max-width: 768px) and (min-width: 420px) {
+@media screen and (max-width: 768px) and (min-width: 450px) {
   .title {
     height: 20vh;
   }
@@ -68,10 +72,14 @@ html {
   header {
     position: fixed;
   }
+  .footer{
+    margin-top: 10vh;
+  }
   .list-item {
     display: grid;
     white-space: unset;
     padding: 2vh;
+    margin: 0.75vh;
   }
   .menu {
     top: 40vh;
@@ -93,10 +101,14 @@ html {
   header {
     position: fixed;
   }
+  .footer{
+    margin-top: 30vh;
+  }
   .list-item {
     display: grid;
     white-space: unset;
     padding: 2vh;
+    margin: 1vh;
   }
   .menu {
     top: 30vh;
@@ -237,7 +249,7 @@ ol {
   background-color: darkslategray;
   border: 0.5vh solid rgb(8, 5, 46);
   border-radius: 5%;
-  margin: 1vh;
+  
   padding-left: 0;
   padding-bottom: 3vh;
   margin-left: 0;
@@ -270,5 +282,5 @@ li:hover, li:focus, li:active{
   align-items: center;
   justify-content: center;
   background-color: rgb(8, 5, 46);
-  margin-top: 30vh;
+  
 }
