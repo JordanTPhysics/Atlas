@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-
 import Menu from "./components/Menu";
+import Popup from "./components/Popup";
+
 
 import {
   PIZZAS,
@@ -17,14 +18,26 @@ import {
   CALZONE,
 } from "./menus";
 
+
+
 export default function App() {
   const [selectedOption, setSelectedOption] = useState("pizzas");
+
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
+  const openPopup = () => {
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setPopupOpen(false);
+  };
 
   const renderComponent = () => {
     switch (selectedOption) {
       case "pizzas":
         return (
-          <div >
+          <div>
             <Menu
               menuItems={PIZZAS}
               title={'ATLAS PIZZAS - - 10" - 12" - 14"'}
@@ -34,7 +47,7 @@ export default function App() {
         );
       case "kebabs":
         return (
-          <div >
+          <div>
             <Menu
               menuItems={KEBABS}
               title={"KEBABS - - Med - Lrg - Xlrg"}
@@ -44,17 +57,17 @@ export default function App() {
         );
       case "burgers":
         return (
-          <div >
+          <div>
             <Menu
               menuItems={BURGERS}
-              title={"BURGERS  - - Med - Lrg - Xlrg"}
+              title={"BURGERS  - - Med - Lrg"}
               backgroundImage={"/images/burger.jpg"}
             />
           </div>
         );
       case "sides":
         return (
-          <div >
+          <div>
             <Menu
               menuItems={SIDEORDER}
               title={"SIDE ORDERS"}
@@ -65,7 +78,7 @@ export default function App() {
 
       case "drinks":
         return (
-          <div >
+          <div>
             <Menu
               menuItems={DRINKSDESSERTS}
               title={"DRINKS & DESSERTS"}
@@ -76,7 +89,7 @@ export default function App() {
 
       case "calzone":
         return (
-          <div >
+          <div>
             <Menu
               menuItems={CALZONE}
               title={"CALZONE"}
@@ -87,7 +100,7 @@ export default function App() {
 
       case "chicken":
         return (
-          <div >
+          <div>
             <Menu
               menuItems={CHICKEN}
               title={"CHICKEN"}
@@ -97,7 +110,7 @@ export default function App() {
         );
       case "wraps":
         return (
-          <div >
+          <div>
             <Menu
               menuItems={WRAPS}
               title={"ATLAS WRAPS"}
@@ -107,7 +120,7 @@ export default function App() {
         );
       case "pittas":
         return (
-          <div >
+          <div>
             <Menu
               menuItems={PITTAS}
               title={"PITTA POCKET"}
@@ -117,7 +130,7 @@ export default function App() {
         );
       case "pastas":
         return (
-          <div >
+          <div>
             <Menu
               menuItems={PASTAS}
               title={"ATLAS PASTAS"}
@@ -128,8 +141,7 @@ export default function App() {
 
       default:
         return (
-          <div >
-            
+          <div>
             <Menu
               menuItems={PIZZAS}
               title={' - ATLAS PIZZAS - 10" - 12" - 14"'}
@@ -141,9 +153,9 @@ export default function App() {
   };
 
   return (
-    <div >
-      <div >
-        <header >
+    <div>
+      <div>
+        <header>
           <div className="neon-text">
             OPEN 7 DAYS A WEEK <br />
             • 4:00PM TILL LATE • DELIVERY SERIVCE TILL LATE
@@ -156,7 +168,7 @@ export default function App() {
               8 St. DAVID'S ROAD SOUTH, LYTHAM ST ANNES, FY8 1TB
             </a>
           </div>
-          <div >
+          <div>
             <img src="/images/AtlasLogo2.png" width={0.2} /> <br></br>
             <strong className="neon-text">
               PIZZAS • KEBABS • BURGERS • FRIED CHICKEN • PASTAS • CALZONE
@@ -170,72 +182,105 @@ export default function App() {
           </div>
         </header>
 
-        
-          
-            <div className="itemlist">
-              <h2 className="neon-text">User Menu</h2>
-              <button className="button" onClick={() => setSelectedOption("pizzas")}>
-                Pizzas
-              </button>
+        <div className="itemlist">
+          <h2 className="neon-text">User Menu</h2>
+          <button
+            className="button"
+            onClick={() => setSelectedOption("pizzas")}
+          >
+            Pizzas
+          </button>
 
-              <button className="button" onClick={() => setSelectedOption("burgers")}>
-                Burgers
-              </button >
-              <button className="button" onClick={() => setSelectedOption("chicken")}>
-                Fried Chicken
-              </button>
-              <button className="button" onClick={() => setSelectedOption("kebabs")}>
-                Kebabs
-              </button>
-              <button className="button" onClick={() => setSelectedOption("calzone")}>
-                Calzone
-              </button>
-              <button className="button" onClick={() => setSelectedOption("drinks")}>
-                Drinks & Desserts
-              </button>
-              <button className="button" onClick={() => setSelectedOption("wraps")}>Wraps</button>
-              <button className="button" onClick={() => setSelectedOption("pittas")}>
-                Pittas
-              </button>
-              <button className="button" onClick={() => setSelectedOption("pastas")}>
-                Pastas
-              </button>
-              <button className="button" onClick={() => setSelectedOption("sides")}>
-                Side Orders
-              </button>
+          <button
+            className="button"
+            onClick={() => setSelectedOption("burgers")
+         }
+          >
+            Burgers
+          </button>
+          <button
+            className="button"
+            onClick={() => setSelectedOption("chicken")}
+          >
+            Fried Chicken
+          </button>
+          <button
+            className="button"
+            onClick={() => setSelectedOption("kebabs")}
+          >
+            Kebabs
+          </button>
+          <button
+            className="button"
+            onClick={() => setSelectedOption("calzone")}
+          >
+            Calzone
+          </button>
+          <button
+            className="button"
+            onClick={() => setSelectedOption("drinks")}
+          >
+            Drinks & Desserts
+          </button>
+          <button className="button" onClick={() => setSelectedOption("wraps")}>
+            Wraps
+          </button>
+          <button
+            className="button"
+            onClick={() => setSelectedOption("pittas")}
+          >
+            Pittas
+          </button>
+          <button
+            className="button"
+            onClick={() => setSelectedOption("pastas")}
+          >
+            Pastas
+          </button>
+          <button className="button" onClick={() => setSelectedOption("sides")}>
+            Side Orders
+          </button>
+        </div>
+      </div>
+
+      <div>{renderComponent()}</div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-logo">
+              <img
+                src="/images/AtlasLogo2.png"
+                alt="Takeaway Logo"
+                width={0.5}
+              />
+              <h1>ATLAS PIZZERIA</h1>
+            </div>
+            <div class="footer-contact"></div>
+            <div class="footer-social">
+              <h3>Follow Us</h3>
+              <a href="#" className="phone-number" target="_blank">
+                Facebook
+              </a> <br/>
+
+              <img
+                src="/images/Award.jpeg"
+                alt="Award for 24 Years of serving St Annes"
+                onClick={openPopup}
+              />
+                
+      <Popup isOpen={isPopupOpen} onClose={closePopup} />
+              
             </div>
           </div>
-
-          <div >{renderComponent()}</div>
-          
-          
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="/images/AtlasLogo2.png" alt="Takeaway Logo" width={0.5}/>
-        <h1>ATLAS PIZZERIA</h1>
-      </div>
-      <div class="footer-contact">
-        
-      </div>
-      <div class="footer-social">
-        <h3>Follow Us</h3>
-        <a href="#" class="social-icon">Facebook</a>
-        <a href="#" class="social-icon">Twitter</a>
-        <a href="#" class="social-icon">Instagram</a>
-      </div>
+          <div class="footer-disclaimer">
+            <p>&copy; 2023 ATLAS PIZZERIA. All rights reserved.</p>
+            <p>Privacy Policy | Terms of Service</p>
+            <p>Designed by Jordan | Images by MidJourney</p>
+            
+          </div>
+        </div>
+      </footer>
     </div>
-    <div class="footer-disclaimer">
-      <p>&copy; 2023 ATLAS PIZZERIA. All rights reserved.</p>
-      <p>Privacy Policy | Terms of Service</p>
-      <p>Designed by Jordan</p>
-    </div>
-  </div>
-</footer>
-
-      </div>
-   
   );
 }

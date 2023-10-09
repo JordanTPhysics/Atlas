@@ -5,7 +5,7 @@ html {
   background-position: center;
   background-size: 100vw;
   background-color: darkblue;
-  background-image: url("images/pxfuel.jpg");
+  background-image: url("images/angle.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -17,9 +17,11 @@ html {
   font-family: "Nunito", sans-serif;
   text-align: center;
   position: relative;
+  font-weight: bold;
+  
 }
 /* SmartPhone */
-@media screen and (max-width: 449px) {
+@media screen and (max-width: 499px) {
   h2,
   .neon-text {
     font-size: 0.75rem; /* Adjust font size for smaller screens */
@@ -44,6 +46,8 @@ html {
   }
   .title {
     height: 10vh;
+    border: 2px solid brown;
+    border-radius: 5%;
   }
   button {
     padding: 0;
@@ -55,7 +59,7 @@ html {
   }
 }
 /* Tablets */
-@media screen and (max-width: 768px) and (min-width: 450px) {
+@media screen and (max-width: 899px) and (min-width: 500px) {
   .title {
     height: 20vh;
   }
@@ -64,7 +68,7 @@ html {
     font-size: 1rem; /* Adjust font size for larger screens */
   }
   .itemlist {
-    top: 40vh;
+    top: 35vh;
     left: 5vw;
     width: 20vw;
     position: relative;
@@ -73,7 +77,7 @@ html {
     position: fixed;
   }
   .footer{
-    margin-top: 10vh;
+    margin-top: 20vh;
   }
   .list-item {
     display: grid;
@@ -82,12 +86,12 @@ html {
     margin: 0.75vh;
   }
   .menu {
-    top: 40vh;
-    width: 40vw;
+    top: 35vh;
+    width: 50vw;
   }
 }
 /* Laptop and Desktop */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 900px) {
   h2,
   .neon-text {
     font-size: 1.25rem; /* Adjust font size for larger screens */
@@ -112,16 +116,18 @@ html {
   }
   .menu {
     top: 30vh;
+    left: 50vw;
     width: 40vw;
   }
   .title {
     height: 30vh;
+    text-shadow: brown;
   }
 }
 
 .menu {
   z-index: 999;
-  left: 30vw;
+  left: 25vw;
   height: max-content;
 }
 
@@ -129,7 +135,7 @@ html {
   z-index: 1000;
   position: fixed;
   border-radius: 3%;
-  background-color: rgb(8, 5, 46);
+  background-color: rgb(152, 39, 20);
   display: block;
   height: fit-content;
   animation: entrance 1s ease-in-out;
@@ -146,7 +152,7 @@ header {
   height: fit-content;
   align-items: center;
   justify-content: center;
-  background-color: rgb(8, 5, 46);
+  background-color: rgb(8, 46, 5);
   color: white;
 }
 
@@ -184,21 +190,6 @@ header {
 
 a {
   text-decoration: none;
-}
-
-@keyframes entrance {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-    transform: scale(0.2);
-    filter: hue-rotate(180deg);
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-    transform: scale(1);
-    filter: hue-rotate(0deg);
-  }
 }
 
 button,
@@ -245,11 +236,12 @@ ol {
   grid-gap: 10px; /* Add spacing between columns (adjust as needed) */
   align-items: center;
   transition: ease 0.5s;
-  color: rgb(8, 5, 6);
-  background-color: darkslategray;
-  border: 0.5vh solid rgb(8, 5, 46);
+  color: black;
+  text-shadow: darkgreen;
+  background-color: rgb(152, 39, 20);
+  border: 0.5vh solid rgb(8, 46, 5);
   border-radius: 5%;
-  
+  font-weight: bold;
   padding-left: 0;
   padding-bottom: 3vh;
   margin-left: 0;
@@ -262,6 +254,7 @@ li:hover, li:focus, li:active{
 
 .id {
   grid-column: 1 / span 1; /* Expand to fit content */
+  font-weight: bold;
 }
 
 .divider {
@@ -274,6 +267,7 @@ li:hover, li:focus, li:active{
 
 .value {
   grid-column: 3 / span 1; /* Expand to fit content */
+  font-weight: bold;
 }
 
 .footer{
@@ -281,6 +275,8 @@ li:hover, li:focus, li:active{
   height: fit-content;
   align-items: center;
   justify-content: center;
-  background-color: rgb(8, 5, 46);
-  
+  background-color: rgb(8, 46, 5);
+  color: white;
+  text-shadow: 0 0 10px rgba(217, 255, 0, 0.8), 0 0 20px rgba(217, 255, 0, 0.8),
+    0 0 30px rgba(217, 255, 0, 0.8), 0 0 40px rgba(217, 255, 0, 0.8);
 }
