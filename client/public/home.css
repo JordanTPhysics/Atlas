@@ -252,6 +252,11 @@ li:hover, li:focus, li:active{
     0 0 30px rgba(217, 255, 0, 0.8), 0 0 40px rgba(217, 255, 0, 0.8);
 }
 
+li{
+  text-shadow: 0 0 10px rgba(7, 5, 0, 0.8), 0 0 20px rgba(7, 5, 0, 0.8),
+    0 0 30px rgba(7, 5, 0, 0.8), 0 0 40px rgba(7, 5, 0, 0.8);
+}
+
 .id {
   grid-column: 1 / span 1; /* Expand to fit content */
   font-weight: bold;
