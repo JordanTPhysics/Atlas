@@ -10,7 +10,7 @@ function Menu({ menuItems, backgroundImage, title }) {
     alignItems: "center",
     alignText: "center",
     fontWeight: "700",
-    color: "black",
+    color: "white",
     border: "2px solid brown",
     borderRadius: "15%",
   };
