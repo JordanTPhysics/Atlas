@@ -23,7 +23,6 @@ function Menu({ menuItems, backgroundImage, title }) {
         backgroundImage: `url(${item.image})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        
       }}
     >
       <div className="id">

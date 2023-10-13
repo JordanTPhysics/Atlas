@@ -52,29 +52,29 @@ export const SIDEORDER = [
 ];
 
 export const BURGERS = [
-  { id: "Beef", value: "£3.00 / £4.00", image: "images/beefB.jpg" },
-  { id: "Cheese", value: "£3.30 / £4.30", image: "images/beefB.jpg" },
-  { id: "Chicken", value: "£3.00 / £4.00", image: "images/chickenB.png" },
+  { id: "Beef Burger", value: "£3.00 / £4.00", image: "images/beefB.jpg" },
+  { id: "Cheeseburger", value: "£3.30 / £4.30", image: "images/beefB.jpg" },
+  { id: "Chicken Burger", value: "£3.00 / £4.00", image: "images/chickenB.png" },
   { id: "Atlas Special - Beef and Donner Filler", value: "£3.90 / £4.90", image: "images/donerB.png" },
   { id: "Zinger Chicken Fillet", value: "£4.00 / £5.50", image: "images/chickenB.png" },
-  { id: "Veggie", value: "£2.70 / £3.70", image: "images/veggieB.jpg" },
+  { id: "Veggie Burger", value: "£2.70 / £3.70", image: "images/veggieB.jpg" },
   { id: "Extra Cheese", value: "£0.30", image: "images/cheese.png" },
 ];
 
 export const KEBABS = [
-  { id: "Donner - Slices of Kebab within", value: "£4.80 / £5.80 / £6.80", image: "images/" },
+  { id: "Donner", value: "£4.80 / £5.80 / £6.80", image: "images/" },
   { id: "Chicken", value: "£4.80 / £5.80 / £6.80", image: "images/" },
   { id: "Chicken Tandoori", value: "£4.80 / £5.80 / £6.80", image: "images/" },
   { id: "Shish", value: "£7.50 / £8.50", image: "images/" },
   { id: "Donner Meat n Chips", value: "£4.50 / £5.50", image: "images/" },
   { id: "Kebab in Bun", value: "£3.80 / £4.80", image: "images/" },
-  { id: "2x Mixed Grill", value: "£7.90", image: "images/" },
-  { id: "3x Mixed Grill", value: "£8.90", image: "images/" },
-  { id: "Special Mix", value: "£9.90", image: "images/" },
+  { id: "2x Mixed Grill - Choose from Donner, Chicken, Tandoori, Shish", value: "£7.90", image: "images/" },
+  { id: "3x Mixed Grill - Choose from Donner, Chicken, Tandoori, Shish", value: "£8.90", image: "images/" },
+  { id: "Special Mix - Donner, Chicken, Tandoori, Shish", value: "£9.90", image: "images/" },
 ];
 
 export const DRINKSDESSERTS = [
-  { id: "Cans", value: "£1.00", image: "images/" },
+  { id: "Cans - Tango, 7up, Coca-Cola, Dr.Pepper", value: "£1.00", image: "images/" },
   { id: "Bottles", value: "£1.50 / £2.50", image: "images/" },
   { id: "Chocolate Shake", value: "£1.50", image: "images/" },
   { id: "Banana Shake", value: "£1.50", image: "images/" },
@@ -173,5 +173,5 @@ export const WRAPS = [
   { id: "Chips Wrap", value: "£2.70", image: "images/" },
   { id: "Chips n Cheese Wrap", value: "£4.00", image: "images/" },
   { id: "Salad Wrap", value: "£2.20", image: "images/" },
-  { id: "Falafel Wrap", value: "£4.50", image: "images/" },
+  { id: "Falafel Wrap - Served with choice of Salad/Sauce", value: "£4.50", image: "images/" },
 ];
