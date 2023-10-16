@@ -7,6 +7,7 @@ import Popup from "./components/Popup";
 import {
   PIZZAS,
   PASTAS,
+  GARLIC,
   PITTAS,
   BURGERS,
   SIDEORDER,
@@ -139,6 +140,28 @@ export default function App() {
           </div>
         );
 
+        case "garlic":
+          return (
+            <div>
+              <Menu
+              menuItems={GARLIC}
+              title={' - GARLIC BREAD - 10" - 12" - 14"'}
+              backgroundImage={"/images/garlic.png"}
+              />
+            </div>
+          );
+
+          case "deals":
+          return (
+            <div>
+              <Menu
+              menuItems={MEALDEAL}
+              title={'MEAL DEALS'}
+              backgroundImage={"/images/mealdeal.png"}
+              />
+            </div>
+          );
+
       default:
         return (
           <div>
@@ -190,7 +213,13 @@ export default function App() {
           >
             Pizzas
           </button>
-
+          <button
+            className="button"
+            onClick={() => setSelectedOption("garlic")
+         }
+          >
+            Garlic Bread
+          </button>
           <button
             className="button"
             onClick={() => setSelectedOption("burgers")
@@ -240,6 +269,11 @@ export default function App() {
           <button className="button" onClick={() => setSelectedOption("sides")}>
             Side Orders
           </button>
+
+         
+          <button className="button" onClick={() => setSelectedOption("deals")}>
+            Meal Deals
+          </button>
         </div>
       </div>
 
@@ -264,6 +298,7 @@ export default function App() {
               </a> <br/>
 
               <img
+              className="award"
                 src="/images/Award.jpeg"
                 alt="Award for 24 Years of serving St Annes"
                 onClick={openPopup}

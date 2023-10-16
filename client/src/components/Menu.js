@@ -15,7 +15,7 @@ function Menu({ menuItems, backgroundImage, title }) {
     borderRadius: "15%",
   };
 
-  const itemElements = menuItems.map((item) => (
+  const itemElements = menuItems.map((item, idx) => (
     <li
       className="list-item"
       key={item.id}
@@ -26,7 +26,7 @@ function Menu({ menuItems, backgroundImage, title }) {
       }}
     >
       <div className="id">
-        <strong>{item.id}</strong>
+        <strong>{title === "CHICKEN" ? "" : idx+1}. {item.id}</strong>
       </div>
       <div className="divider"></div>
       <div className="value">

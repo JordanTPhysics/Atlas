@@ -164,6 +164,15 @@ export const CHICKEN = [
   { id: "20pc Nuggets", value: "£6.50", image: "images/nuggets.png" },
 ];
 
+export const GARLIC = [
+  { id: 'GARLIC BREAD', value: "£3.00 / £4.00 / £5.00", image: "images/gbread.png" },
+  { id: 'GARLIC BREAD CHEESE', value: "£4.00 / £5.00 / £6.00", image: "images/gbread.png" },
+  { id: 'GARLIC BREAD TOMATO', value: "£4.50 / £5.50 / £6.50", image: "images/gbread.png" },
+  { id: 'GARLIC BREAD CHEESE & TOMATO', value: "£4.90 / £6.40 / £7.90", image: "images/gbread.png" },
+  { id: 'GARLIC BREAD CHEESE & PEPPERONI', value: "£5.00 / £6.50 / £8.00", image: "images/gbread.png" },
+  { id: 'GARLIC BREAD CHEESE & MUSHROOM', value: "£5.00 / £6.50 / £8.00", image: "images/gbread.png" },
+]
+
 export const WRAPS = [
   { id: "Strips Wrap", value: "£4.50", image: "images/" },
   { id: "Donner Wrap", value: "£4.50", image: "images/" },

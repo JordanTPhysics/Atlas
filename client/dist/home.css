@@ -192,6 +192,10 @@ a {
   text-decoration: none;
 }
 
+.award{
+  cursor: pointer;
+}
+
 button,
 .button {
   width: inherit;
