@@ -90,8 +90,8 @@ html {
     width: 50vw;
   }
 }
-/* Laptop and Desktop */
-@media screen and (min-width: 900px) {
+/* Laptop */
+@media screen and (min-width: 900px) and (max-width: 1319px){
   h2,
   .neon-text {
     font-size: 1.25rem; /* Adjust font size for larger screens */
@@ -121,6 +121,43 @@ html {
   }
   .title {
     height: 30vh;
+    text-shadow: brown;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1319px){
+  h2,
+  .neon-text {
+    font-size: 2rem; /* Adjust font size for larger screens */
+  }
+  .itemlist {
+    font-size: 3vh;
+    top: 40vh;
+    left: 5vw;
+    width: 20vw;
+    position: relative;
+  }
+  header {
+    position: fixed;
+  }
+  .footer{
+    margin-top: 40vh;
+  }
+  .list-item {
+    display: grid;
+    white-space: unset;
+    padding: 2vh;
+    margin: 1vh;
+  }
+  .menu {
+    font-size: 2vh;
+    top: 35vh;
+    left: 70vw;
+    width: 50vw;
+  }
+  .title {
+    height: 20vh;
     text-shadow: brown;
   }
 }
