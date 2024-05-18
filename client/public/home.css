@@ -4,7 +4,6 @@ html {
   margin: 0;
   background-position: center;
   background-size: 100vw;
-  background-color: darkblue;
   background-image: url("images/angle.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,7 +26,6 @@ html {
     font-size: 0.75rem; /* Adjust font size for smaller screens */
   }
   .itemlist {
-    top: 30vh;
     position: relative;
     left: 0vw;
     width: 30vw;
@@ -46,8 +44,6 @@ html {
   }
   .title {
     height: 10vh;
-    border: 2px solid brown;
-    border-radius: 5%;
   }
   button {
     padding: 0;
@@ -68,7 +64,6 @@ html {
     font-size: 1rem; /* Adjust font size for larger screens */
   }
   .itemlist {
-    top: 35vh;
     left: 5vw;
     width: 20vw;
     position: relative;
@@ -97,7 +92,6 @@ html {
     font-size: 1.25rem; /* Adjust font size for larger screens */
   }
   .itemlist {
-    top: 40vh;
     left: 5vw;
     width: 20vw;
     position: relative;
@@ -121,7 +115,6 @@ html {
   }
   .title {
     height: 30vh;
-    text-shadow: brown;
   }
 }
 
@@ -133,7 +126,6 @@ html {
   }
   .itemlist {
     font-size: 3vh;
-    top: 40vh;
     left: 5vw;
     width: 20vw;
     position: relative;
@@ -158,14 +150,13 @@ html {
   }
   .title {
     height: 20vh;
-    text-shadow: brown;
   }
 }
 
 .menu {
   z-index: 999;
-  left: 25vw;
   height: max-content;
+  left: 30%;
 }
 
 .itemlist {
@@ -191,6 +182,10 @@ header {
   justify-content: center;
   background-color: rgb(8, 46, 5);
   color: white;
+}
+
+.title{
+  border: 3% brown solid
 }
 
 .neon-text {

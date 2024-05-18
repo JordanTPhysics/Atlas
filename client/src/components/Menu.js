@@ -6,13 +6,13 @@ function Menu({ menuItems, backgroundImage, title }) {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     display: "flex",
-    justifyContent: "center" /* Horizontally center the image */,
+    justifyContent: "center" ,
     alignItems: "center",
     alignText: "center",
     fontWeight: "700",
     color: "white",
-    border: "2px solid brown",
-    borderRadius: "15%",
+    border: "2vw solid brown",
+    borderRadius: "4%"
   };
 
   const itemElements = menuItems.map((item, idx) => (

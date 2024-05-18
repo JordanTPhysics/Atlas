@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Menu from "./components/Menu";
 import Popup from "./components/Popup";
-
 
 import {
   PIZZAS,
@@ -19,13 +18,15 @@ import {
   CALZONE,
 } from "./menus";
 
-
-
 export default function App() {
+
+  const menuRef = useRef(null);
+  const headerRef = useRef(null);
+
   const [selectedOption, setSelectedOption] = useState("pizzas");
-
   const [isPopupOpen, setPopupOpen] = useState(false);
-
+  const [menuHeight, setMenuHeight] = useState(0);
+  
   const openPopup = () => {
     setPopupOpen(true);
   };
@@ -33,6 +34,24 @@ export default function App() {
   const closePopup = () => {
     setPopupOpen(false);
   };
+
+  useEffect(
+    () => {
+      updateHeight();
+      window.addEventListener("resize", updateHeight);
+      return () => {
+        window.removeEventListener("resize", updateHeight);
+      };
+    }, [menuHeight]
+  );
+
+  const updateHeight = () => {
+      if(headerRef.current) {
+        setMenuHeight(headerRef.current.offsetHeight);
+      } else {
+        console.log("headerRef is Null")
+      }
+  }
 
   const renderComponent = () => {
     switch (selectedOption) {
@@ -178,7 +197,7 @@ export default function App() {
   return (
     <div>
       <div>
-        <header>
+        <header id="header" ref={headerRef}>
           <div className="neon-text">
             OPEN 7 DAYS A WEEK <br />
             • 4:00PM TILL LATE • DELIVERY SERIVCE TILL LATE
@@ -205,7 +224,10 @@ export default function App() {
           </div>
         </header>
 
-        <div className="itemlist">
+        <div className="itemlist" id="itemlist" ref={menuRef}
+        style={{
+          'top': `${menuHeight * 1.05}px`
+        }}>
           <h2 className="neon-text">User Menu</h2>
           <button
             className="button"
@@ -279,10 +301,10 @@ export default function App() {
 
       <div>{renderComponent()}</div>
 
-      <footer class="footer">
-        <div class="container">
-          <div class="footer-content">
-            <div class="footer-logo">
+      <footer className="footer">
+        <div className="container">
+          <div className="footer-content">
+            <div className="footer-logo">
               <img
                 src="/images/AtlasLogo2.png"
                 alt="Takeaway Logo"
@@ -290,8 +312,8 @@ export default function App() {
               />
               <h1>ATLAS PIZZERIA</h1>
             </div>
-            <div class="footer-contact"></div>
-            <div class="footer-social">
+            <div className="footer-contact"></div>
+            <div className="footer-social">
               <h3>Follow Us</h3>
               <a href="#" className="phone-number" target="_blank">
                 Facebook
@@ -308,7 +330,7 @@ export default function App() {
               
             </div>
           </div>
-          <div class="footer-disclaimer">
+          <div className="footer-disclaimer">
             <p>&copy; 2023 ATLAS PIZZERIA. All rights reserved.</p>
             <p>Privacy Policy | Terms of Service</p>
             <p>Designed by Jordan | Images by MidJourney</p>
